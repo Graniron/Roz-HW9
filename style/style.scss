@@ -11,10 +11,11 @@ $pos: relative;
 $basket: url("../images/basket_white.png");
 $compare: url("../images/scales.png");
 $wishes: url("../images/heart365.png");
-
+$minw: 1200px;
 @mixin user_choise {
 	display: $inline_b;
 	border-radius: $brad_user;
+	border: 1px solid transparent;
 	&:hover {
 		border: 1px solid red;
 	}
@@ -45,6 +46,7 @@ $wishes: url("../images/heart365.png");
 
 html, body {
 	width: $fullwidth;
+	min-width: $minw;
 	margin: 0;
 	font-family: Arial, Helvetica, FreeSans, "Liberation Sans", "Nimbus Sans L", sans-serif;
 	a {
@@ -59,7 +61,7 @@ header {
 	adv_school {
 		position: $pos;
 		display: block;
-		width: $fullwidth;
+		min-width: $fullwidth;
 	}
 	img {
 		width: $fullwidth;
@@ -95,7 +97,7 @@ header {
 		position: $pos;
 		top: -15px;
 		background: linear-gradient(#FFFFFF, #F3F3F3);
-		width: 100%;
+		width: $fullwidth;
 		border-bottom: 2px solid lightgrey;
 		height: $bar_height;
 		padding-bottom: 10px;
@@ -116,6 +118,7 @@ header {
 			border-left: 1px solid #EAEAEA;
 			border-right: 1px solid #EAEAEA;
 			height: 100%;
+			line-height: 0.5em;
 		}
 		.search {
 			display: $inline_b;
@@ -127,11 +130,6 @@ header {
 			input[type="search"] {
 				width: 260px;
 				height: 30px;
-				&:focus {
-					&:after {
-						content: "";
-					}
-				}
 			}
 			select {
 				height: 30px;
@@ -390,6 +388,7 @@ header {
 		margin-left: $marg_main;
 		margin-top: 50px;
 		margin-right: $marg_main;
+		min-width: $minw;
 		h2 {
 			@include hstyle;
 		}
@@ -500,9 +499,10 @@ footer {
 			&:hover {
 				border: 1px solid red;
 			}
-			figcaption {
+			/*figcaption {
 				text-align: center;
-			}
+				margin: 0 auto;
+			}*/
 		}
 	}
 }

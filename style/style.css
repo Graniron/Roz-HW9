@@ -1,5 +1,6 @@
 html, body {
   width: 100%;
+  min-width: 1200px;
   margin: 0;
   font-family: Arial, Helvetica, FreeSans, "Liberation Sans", "Nimbus Sans L", sans-serif; }
   html a, body a {
@@ -13,7 +14,7 @@ html, body {
 header adv_school {
   position: relative;
   display: block;
-  width: 100%; }
+  min-width: 100%; }
 header img {
   width: 100%;
   margin-bottom: 3px; }
@@ -60,7 +61,8 @@ header .bar {
     padding: 0 10px;
     border-left: 1px solid #EAEAEA;
     border-right: 1px solid #EAEAEA;
-    height: 100%; }
+    height: 100%;
+    line-height: 0.5em; }
   header .bar .search {
     display: inline-block;
     position: relative;
@@ -71,8 +73,6 @@ header .bar {
     header .bar .search input[type="search"] {
       width: 260px;
       height: 30px; }
-      header .bar .search input[type="search"]:focus:after {
-        content: ""; }
     header .bar .search select {
       height: 30px;
       border-radius: 5%;
@@ -98,6 +98,7 @@ header .bar {
     header .bar .user_options .basket {
       display: inline-block;
       border-radius: 10%;
+      border: 1px solid transparent;
       width: 80px;
       color: #3e77aa; }
       header .bar .user_options .basket:hover {
@@ -107,6 +108,7 @@ header .bar {
     header .bar .user_options .compare {
       display: inline-block;
       border-radius: 10%;
+      border: 1px solid transparent;
       width: 85px;
       color: #3e77aa; }
       header .bar .user_options .compare:hover {
@@ -116,6 +118,7 @@ header .bar {
     header .bar .user_options .wishes {
       display: inline-block;
       border-radius: 10%;
+      border: 1px solid transparent;
       width: 80px;
       color: #3e77aa; }
       header .bar .user_options .wishes:hover {
@@ -210,6 +213,7 @@ header .bar {
         .middle_section .history .history_child .user_options .basket {
           display: inline-block;
           border-radius: 10%;
+          border: 1px solid transparent;
           width: 45px;
           height: 38px;
           background: #6BCF61; }
@@ -224,7 +228,8 @@ header .bar {
           width: 45px;
           height: 38px;
           display: inline-block;
-          border-radius: 10%; }
+          border-radius: 10%;
+          border: 1px solid transparent; }
           .middle_section .history .history_child .user_options .compare:hover {
             border: 1px solid red; }
           .middle_section .history .history_child .user_options .compare .icon:before {
@@ -235,6 +240,7 @@ header .bar {
           position: relative;
           display: inline-block;
           border-radius: 10%;
+          border: 1px solid transparent;
           width: 45px;
           height: 38px; }
           .middle_section .history .history_child .user_options .wishes:hover {
@@ -286,6 +292,7 @@ header .bar {
         .middle_section .popular .popular_child .user_options .basket {
           display: inline-block;
           border-radius: 10%;
+          border: 1px solid transparent;
           width: 45px;
           height: 38px;
           background: #6BCF61; }
@@ -300,6 +307,7 @@ header .bar {
           position: relative;
           display: inline-block;
           border-radius: 10%;
+          border: 1px solid transparent;
           width: 45px;
           height: 38px; }
           .middle_section .popular .popular_child .user_options .wishes:hover {
@@ -312,7 +320,8 @@ header .bar {
   .middle_section .promotion {
     margin-left: 30px;
     margin-top: 50px;
-    margin-right: 30px; }
+    margin-right: 30px;
+    min-width: 1200px; }
     .middle_section .promotion h2 {
       letter-spacing: -0.015em;
       font-weight: normal; }
@@ -405,14 +414,16 @@ footer {
       display: inline-block;
       width: 18.5%;
       height: auto;
-      border: 1px solid lightgrey; }
+      border: 1px solid lightgrey;
+      /*figcaption {
+      	text-align: center;
+      	margin: 0 auto;
+      }*/ }
       .slider_d .main_category .main_category-child a:hover {
         color: red;
         text-decoration: underline; }
       .slider_d .main_category .main_category-child:hover {
         border: 1px solid red; }
-      .slider_d .main_category .main_category-child figcaption {
-        text-align: center; }
 
 .container {
   max-width: 80%;
